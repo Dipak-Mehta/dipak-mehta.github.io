@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipak Mehta | DevOps Engineer</title>
+    <style>
+        :root {
+            --bg: #0a0f1d;
+            --card-bg: #111827;
+            --accent: #38bdf8;
+            --text: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border: #1f2937;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; max-width: 1000px; margin: 0 auto; }
+        
+        header { text-align: center; padding: 40px 0; border-bottom: 1px solid var(--border); }
+        h1 { font-size: 2.5rem; color: var(--accent); margin-bottom: 5px; }
+        .subtitle { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 15px; }
+        .contact-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .contact-links a { color: var(--accent); text-decoration: none; font-size: 0.95rem; border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; transition: 0.3s; }
+        .contact-links a:hover { background: var(--border); }
+
+        section { margin: 30px 0; }
+        h2 { color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 8px; margin-bottom: 20px; font-size: 1.5rem; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+        .skill-card { background: var(--card-bg); padding: 15px; border-radius: 8px; border: 1px solid var(--border); }
+        .skill-card h3 { color: var(--accent); font-size: 1rem; margin-bottom: 8px; }
+        .skill-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+        .exp-card { background: var(--card-bg); padding: 20px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 20px; }
+        .exp-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 10px; }
+        .exp-role { font-weight: bold; color: var(--text); }
+        .exp-company { color: var(--accent); }
+        .exp-date { color: var(--text-muted); font-size: 0.9rem; }
+        ul { margin-left: 20px; color: var(--text-muted); font-size: 0.95rem; }
+        li { margin-bottom: 6px; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dipak Mehta</h1>
+        <p class="subtitle">DevOps Engineer | Cloud Infrastructure & CI/CD Specialist</p>
+        <div class="contact-links">
+            <a href="mailto:dipakm193@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/dipak-mehta-47b856248" target="_blank">LinkedIn</a>
+            <a href="tel:+919503286866">+91-9503286866</a>
+            <a href="#">Pune, India</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p style="color: var(--text-muted);">
+            DevOps Engineer with 4+ years of experience in designing, deploying, and managing scalable cloud infrastructure on AWS, Azure, and GCP[cite: 1]. Expertise in CI/CD pipelines, containerization, Infrastructure as Code (Terraform), and monitoring solutions[cite: 1]. Strong experience with Kubernetes (EKS/ECS), Docker, and automation using Bash and Python[cite: 1]. Proven ability to optimize cloud costs, improve reliability, and reduce deployment failures[cite: 1].
+        </p>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Cloud Platforms</h3>
+                <p>AWS (ECS, EKS, Lambda, CloudFront), Azure, GCP[cite: 1]</p>
+            </div>
+            <div class="skill-card">
+                <h3>CI/CD & IaC</h3>
+                <p>Jenkins, GitLab CI/CD, AWS CodePipeline, Terraform, CloudFormation[cite: 1]</p>
+            </div>
+            <div class="skill-card">
+                <h3>Containers & Orchestration</h3>
+                <p>Docker, Kubernetes (EKS, ECS)[cite: 1]</p>
+            </div>
+            <div class="skill-card">
+                <h3>Monitoring & Incident</h3>
+                <p>Grafana, Prometheus, CloudWatch, Loki, PagerDuty[cite: 1]</p>
+            </div>
+            <div class="skill-card">
+                <h3>Scripting & DBs</h3>
+                <p>Bash, Python, MySQL, MariaDB, MongoDB, PostgreSQL[cite: 1]</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        
+        <div class="exp-card">
+            <div class="exp-header">
+                <div>
+                    <span class="exp-role">DevOps Engineer</span> — <span class="exp-company">Zestl Software Pvt. Ltd.</span>[cite: 1]
+                </div>
+                <div class="exp-date">Dec 2022 – Present</div>[cite: 1]
+            </div>
+            <ul>
+                <li>Designed and deployed scalable applications using AWS services including ECS, EKS, Lambda, and CloudFront[cite: 1].</li>
+                <li>Built and maintained CI/CD pipelines using Jenkins, GitLab CI/CD, and AWS CodePipeline, reducing deployment failures by 45%[cite: 1].</li>
+                <li>Managed multi-account environments across AWS, Azure, and GCP using Terraform, improving efficiency by 35%[cite: 1].</li>
+                <li>Implemented monitoring solutions using Grafana, Prometheus, Datadog, and CloudWatch, reducing incident response time by 40%[cite: 1].</li>
+                <li>Migrated applications to Kubernetes (AWS EKS), improving scalability by 50%[cite: 1].</li>
+            </ul>
+        </div>
+
+        <div class="exp-card">
+            <div class="exp-header">
+                <div>
+                    <span class="exp-role">DevOps Engineer</span> — <span class="exp-company">Hatcube Solution LLP</span>[cite: 1]
+                </div>
+                <div class="exp-date">Aug 2021 – Dec 2022</div>[cite: 1]
+            </div>
+            <ul>
+                <li>Supported deployment of applications on AWS EC2 and ECS infrastructure[cite: 1].</li>
+                <li>Built CI/CD pipelines using Jenkins for multiple applications[cite: 1].</li>
+                <li>Created infrastructure using CloudFormation and Terraform, and developed Docker containers for microservices[cite: 1].</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="two-col">
+        <div>
+            <h2>Education</h2>
+            <p><strong>M.Sc.</strong> (2015 – 2017)[cite: 1]</p>
+            <p style="color: var(--text-muted);">Dr. Babasaheb Ambedkar Marathwada University (CGPA: 7.44)[cite: 1]</p>
+        </div>
+        <div>
+            <h2>Certifications & Awards</h2>
+            <ul style="margin-left: 15px;">
+                <li>AWS Cloud Practitioner Essentials[cite: 1]</li>
+                <li>Complete Python Developer Certification[cite: 1]</li>
+                <li>Best Employee Q2 2024 (Odin's Beard Award)[cite: 1]</li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+</html>
