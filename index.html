@@ -3,142 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dipak Mehta | DevOps Engineer</title>
+    <title>Dipak Mehta | DevOps & Cloud Engineer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --bg: #0a0f1d;
-            --card-bg: #111827;
-            --accent: #38bdf8;
-            --text: #f3f4f6;
+            --bg-color: #0b0f19;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --accent-blue: #38bdf8;
+            --accent-green: #10b981;
+            --accent-purple: #818cf8;
+            --text-main: #f3f4f6;
             --text-muted: #9ca3af;
-            --border: #1f2937;
+            --border-color: rgba(255, 255, 255, 0.08);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; max-width: 1000px; margin: 0 auto; }
-        
-        header { text-align: center; padding: 40px 0; border-bottom: 1px solid var(--border); }
-        h1 { font-size: 2.5rem; color: var(--accent); margin-bottom: 5px; }
-        .subtitle { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 15px; }
-        .contact-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .contact-links a { color: var(--accent); text-decoration: none; font-size: 0.95rem; border: 1px solid var(--border); padding: 6px 12px; border-radius: 6px; transition: 0.3s; }
-        .contact-links a:hover { background: var(--border); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
 
-        section { margin: 30px 0; }
-        h2 { color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 8px; margin-bottom: 20px; font-size: 1.5rem; }
+        /* Background glow effect */
+        .glow-bg {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;
+            background: radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
+                        radial-gradient(circle at 85% 80%, rgba(129, 140, 248, 0.08) 0%, transparent 40%);
+        }
 
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
-        .skill-card { background: var(--card-bg); padding: 15px; border-radius: 8px; border: 1px solid var(--border); }
-        .skill-card h3 { color: var(--accent); font-size: 1rem; margin-bottom: 8px; }
-        .skill-card p { font-size: 0.9rem; color: var(--text-muted); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        .exp-card { background: var(--card-bg); padding: 20px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 20px; }
-        .exp-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 10px; }
-        .exp-role { font-weight: bold; color: var(--text); }
-        .exp-company { color: var(--accent); }
-        .exp-date { color: var(--text-muted); font-size: 0.9rem; }
-        ul { margin-left: 20px; color: var(--text-muted); font-size: 0.95rem; }
-        li { margin-bottom: 6px; }
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; border-bottom: 1px solid var(--border-color); }
+        .logo { font-size: 1.2rem; font-weight: 700; color: var(--accent-blue); letter-spacing: 1px; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 20px; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent-blue); }
 
-        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+        /* Hero Section */
+        .hero { padding: 70px 0 40px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+        .hero-text h1 { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 15px; }
+        .hero-text h1 span { background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-text p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 25px; }
+        .status-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: var(--accent-green); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; margin-bottom: 20px; }
+        .dot { width: 8px; height: 8px; background-color: var(--accent-green); border-radius: 50%; box-shadow: 0 0 8px var(--accent-green); }
+
+        .btn-group { display: flex; gap: 15px; }
+        .btn { padding: 10px 22px; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+        .btn-primary { background: var(--accent-blue); color: #000; }
+        .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-secondary { border: 1px solid var(--border-color); color: var(--text-main); background: var(--card-bg); }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.05); }
+
+        /* Mini Terminal Widget */
+        .terminal { background: #070a12; border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; font-family: 'Courier New', Courier, monospace; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .terminal-header { background: #111827; padding: 10px; display: flex; gap: 6px; }
+        .t-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .t-red { background: #ef4444; } .t-yellow { background: #f59e0b; } .t-green { background: #10b981; }
+        .terminal-body { padding: 15px; font-size: 0.85rem; color: #a7f3d0; }
+        .t-cmd { color: var(--accent-blue); }
+        .t-output { color: var(--text-muted); margin-bottom: 8px; }
+
+        /* Stats Bar */
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 0; }
+        .stat-card { background: var(--card-bg); border: 1px solid var(--border-color); backdrop-filter: blur(10px); padding: 20px; border-radius: 12px; text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: 800; color: var(--accent-blue); }
+        .stat-label { font-size: 0.85rem; color: var(--text-muted); }
+
+        /* Section Styling */
+        section { padding: 50px 0; }
+        .section-title { font-size: 1.8rem; margin-bottom: 30px; display: flex; align-items: center; gap: 10px; }
+        .section-title i { color: var(--accent-blue); font-size: 1.4rem; }
+
+        /* Skills Tags */
+        .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .skill-box { background: var(--card-bg); border: 1px solid var(--border-color); padding: 20px; border-radius: 12px; }
+        .skill-box h3 { font-size: 1.05rem; margin-bottom: 12px; color: var(--accent-purple); }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); color: var(--accent-blue); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; }
+
+        /* Experience Timeline */
+        .timeline { position: relative; border-left: 2px solid var(--border-color); padding-left: 25px; margin-left: 10px; }
+        .timeline-item { position: relative; margin-bottom: 35px; }
+        .timeline-item::before { content: ''; position: absolute; left: -31px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent-blue); border: 2px solid var(--bg-color); }
+        .job-title { font-size: 1.2rem; font-weight: 700; }
+        .job-meta { color: var(--accent-blue); font-size: 0.9rem; margin-bottom: 10px; }
+        .job-bullets { list-style: none; }
+        .job-bullets li { position: relative; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 8px; }
+        .job-bullets li::before { content: '▹'; position: absolute; left: 0; color: var(--accent-blue); }
+
+        /* Footer */
+        footer { border-top: 1px solid var(--border-color); text-align: center; padding: 30px 0; color: var(--text-muted); font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .hero-text h1 { font-size: 2.2rem; }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Dipak Mehta</h1>
-        <p class="subtitle">DevOps Engineer | Cloud Infrastructure & CI/CD Specialist</p>
-        <div class="contact-links">
-            <a href="mailto:dipakm193@gmail.com">Email</a>
-            <a href="https://linkedin.com/in/dipak-mehta-47b856248" target="_blank">LinkedIn</a>
-            <a href="tel:+919503286866">+91-9503286866</a>
-            <a href="#">Pune, India</a>
-        </div>
-    </header>
+    <div class="glow-bg"></div>
 
-    <section>
-        <h2>Professional Summary</h2>
-        <p style="color: var(--text-muted);">
-            DevOps Engineer with 4+ years of experience in designing, deploying, and managing scalable cloud infrastructure on AWS, Azure, and GCP[cite: 1]. Expertise in CI/CD pipelines, containerization, Infrastructure as Code (Terraform), and monitoring solutions[cite: 1]. Strong experience with Kubernetes (EKS/ECS), Docker, and automation using Bash and Python[cite: 1]. Proven ability to optimize cloud costs, improve reliability, and reduce deployment failures[cite: 1].
-        </p>
-    </section>
+    <div class="container">
+        <nav>
+            <div class="logo">&lt;DipakMehta /&gt;</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+            </div>
+        </nav>
 
-    <section>
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Cloud Platforms</h3>
-                <p>AWS (ECS, EKS, Lambda, CloudFront), Azure, GCP[cite: 1]</p>
-            </div>
-            <div class="skill-card">
-                <h3>CI/CD & IaC</h3>
-                <p>Jenkins, GitLab CI/CD, AWS CodePipeline, Terraform, CloudFormation[cite: 1]</p>
-            </div>
-            <div class="skill-card">
-                <h3>Containers & Orchestration</h3>
-                <p>Docker, Kubernetes (EKS, ECS)[cite: 1]</p>
-            </div>
-            <div class="skill-card">
-                <h3>Monitoring & Incident</h3>
-                <p>Grafana, Prometheus, CloudWatch, Loki, PagerDuty[cite: 1]</p>
-            </div>
-            <div class="skill-card">
-                <h3>Scripting & DBs</h3>
-                <p>Bash, Python, MySQL, MariaDB, MongoDB, PostgreSQL[cite: 1]</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Professional Experience</h2>
-        
-        <div class="exp-card">
-            <div class="exp-header">
-                <div>
-                    <span class="exp-role">DevOps Engineer</span> — <span class="exp-company">Zestl Software Pvt. Ltd.</span>[cite: 1]
+        <section class="hero">
+            <div class="hero-text">
+                <div class="status-badge">
+                    <span class="dot"></span> Available for DevOps Roles
                 </div>
-                <div class="exp-date">Dec 2022 – Present</div>[cite: 1]
-            </div>
-            <ul>
-                <li>Designed and deployed scalable applications using AWS services including ECS, EKS, Lambda, and CloudFront[cite: 1].</li>
-                <li>Built and maintained CI/CD pipelines using Jenkins, GitLab CI/CD, and AWS CodePipeline, reducing deployment failures by 45%[cite: 1].</li>
-                <li>Managed multi-account environments across AWS, Azure, and GCP using Terraform, improving efficiency by 35%[cite: 1].</li>
-                <li>Implemented monitoring solutions using Grafana, Prometheus, Datadog, and CloudWatch, reducing incident response time by 40%[cite: 1].</li>
-                <li>Migrated applications to Kubernetes (AWS EKS), improving scalability by 50%[cite: 1].</li>
-            </ul>
-        </div>
-
-        <div class="exp-card">
-            <div class="exp-header">
-                <div>
-                    <span class="exp-role">DevOps Engineer</span> — <span class="exp-company">Hatcube Solution LLP</span>[cite: 1]
+                <h1>DevOps & Cloud <span>Infrastructure Engineer</span></h1>
+                <p>Specializing in AWS, Kubernetes, Terraform, and building resilient CI/CD pipelines that streamline deployment workflows.</p>
+                
+                <div class="btn-group">
+                    <a href="mailto:dipakm193@gmail.com" class="btn btn-primary"><i class="fa-regular fa-envelope"></i> Get In Touch</a>
+                    <a href="https://linkedin.com/in/dipak-mehta-47b856248" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                 </div>
-                <div class="exp-date">Aug 2021 – Dec 2022</div>[cite: 1]
             </div>
-            <ul>
-                <li>Supported deployment of applications on AWS EC2 and ECS infrastructure[cite: 1].</li>
-                <li>Built CI/CD pipelines using Jenkins for multiple applications[cite: 1].</li>
-                <li>Created infrastructure using CloudFormation and Terraform, and developed Docker containers for microservices[cite: 1].</li>
-            </ul>
-        </div>
-    </section>
 
-    <section class="two-col">
-        <div>
-            <h2>Education</h2>
-            <p><strong>M.Sc.</strong> (2015 – 2017)[cite: 1]</p>
-            <p style="color: var(--text-muted);">Dr. Babasaheb Ambedkar Marathwada University (CGPA: 7.44)[cite: 1]</p>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="t-dot t-red"></div>
+                    <div class="t-dot t-yellow"></div>
+                    <div class="t-dot t-green"></div>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="t-cmd">dipak@devops-node:~$</span> kubectl get status</p>
+                    <p class="t-output">NAME: dipak-mehta<br>ROLE: DevOps Engineer<br>LOCATION: Pune, India<br>EXPERIENCE: 4+ Years</p>
+                    <p><span class="t-cmd">dipak@devops-node:~$</span> terraform plan</p>
+                    <p class="t-output">Plan: 3 to add (AWS, K8s, CI/CD), 0 to change.</p>
+                    <p><span class="t-cmd">dipak@devops-node:~$</span> <span style="animation: blink 1s infinite;">_</span></p>
+                </div>
+            </div>
+        </section>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">45%</div>
+                <div class="stat-label">Reduction in Deployment Failures</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">40%</div>
+                <div class="stat-label">Faster Incident Response[cite: 1]</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50%</div>
+                <div class="stat-label">Scalability Boost via EKS[cite: 1]</div>
+            </div>
         </div>
-        <div>
-            <h2>Certifications & Awards</h2>
-            <ul style="margin-left: 15px;">
-                <li>AWS Cloud Practitioner Essentials[cite: 1]</li>
-                <li>Complete Python Developer Certification[cite: 1]</li>
-                <li>Best Employee Q2 2024 (Odin's Beard Award)[cite: 1]</li>
-            </ul>
-        </div>
-    </section>
+
+        <section id="skills">
+            <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Technical Toolkit</h2>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <h3><i class="fa-brands fa-aws"></i> Cloud Platforms</h3>
+                    <div class="tags">
+                        <span class="tag">AWS (ECS, EKS, Lambda, CloudFront)[cite: 1]</span>
+                        <span class="tag">Azure[cite: 1]</span>
+                        <span class="tag">GCP[cite: 1]</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h3><i class="fa-solid fa-code-branch"></i> CI/CD & IaC</h3>
+                    <div class="tags">
+                        <span class="tag">Terraform[cite: 1]</span>
+                        <span class="tag">Jenkins[cite: 1]</span>
+                        <span class="tag">GitLab CI/CD[cite: 1]</span>
+                        <span class="tag">AWS CodePipeline[cite: 1]</span>
+                        <span class="tag">CloudFormation[cite: 1]</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h3><i class="fa-solid fa-cubes"></i> Containers & K8s</h3>
+                    <div class="tags">
+                        <span class="tag">Kubernetes (EKS/ECS)[cite: 1]</span>
+                        <span class="tag">Docker[cite: 1]</span>
+                        <span class="tag">Microservices[cite: 1]</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h3><i class="fa-solid fa-chart-line"></i> Monitoring & Databases</h3>
+                    <div class="tags">
+                        <span class="tag">Grafana[cite: 1]</span>
+                        <span class="tag">Prometheus[cite: 1]</span>
+                        <span class="tag">CloudWatch[cite: 1]</span>
+                        <span class="tag">Datadog[cite: 1]</span>
+                        <span class="tag">PagerDuty[cite: 1]</span>
+                        <span class="tag">MySQL / MariaDB / Postgres[cite: 1]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="job-title">DevOps Engineer</div>
+                    <div class="job-meta">Zestl Software Pvt. Ltd. | Dec 2022 – Present[cite: 1]</div>
+                    <ul class="job-bullets">
+                        <li>Designed and deployed scalable applications on AWS (ECS, EKS, Lambda, CloudFront)[cite: 1].</li>
+                        <li>Maintained multi-account environments across AWS, Azure, and GCP using Terraform, boosting operational efficiency by 35%[cite: 1].</li>
+                        <li>Built CI/CD automation in Jenkins and GitLab CI, reducing deployment failures by 45%[cite: 1].</li>
+                        <li>Implemented observability stacks with Grafana, Prometheus, Datadog, and CloudWatch, cutting incident response time by 40%[cite: 1].</li>
+                        <li>Migrated workloads to AWS EKS, increasing infrastructure scalability by 50%[cite: 1].</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="job-title">DevOps Engineer</div>
+                    <div class="job-meta">Hatcube Solution LLP | Aug 2021 – Dec 2022[cite: 1]</div>
+                    <ul class="job-bullets">
+                        <li>Managed cloud operations for applications hosted on AWS EC2 and ECS infrastructure[cite: 1].</li>
+                        <li>Created infrastructure templates with CloudFormation and Terraform, containerizing microservices with Docker[cite: 1].</li>
+                        <li>Established CloudWatch and Grafana monitoring dashboards for development, testing, and production environments[cite: 1].</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education & Recognition</h2>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <h3>Education</h3>
+                    <p><strong>M.Sc.</strong> (2015 – 2017)[cite: 1]</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Dr. Babasaheb Ambedkar Marathwada University (CGPA: 7.44)[cite: 1]</p>
+                </div>
+                <div class="skill-box">
+                    <h3>Certifications & Awards</h3>
+                    <ul style="margin-left: 15px; color: var(--text-muted); font-size: 0.9rem;">
+                        <li>AWS Cloud Practitioner Essentials[cite: 1]</li>
+                        <li>Complete Python Developer Certification[cite: 1]</li>
+                        <li><strong>Best Employee Q2 2024</strong> (Odin's Beard Award)[cite: 1]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Dipak Mehta. Hosted on GitHub Pages.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
