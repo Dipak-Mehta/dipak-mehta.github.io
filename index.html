@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>Dipak Mehta | DevOps & Cloud Engineer</title>
-    <meta name="title" content="Dipak Mehta | DevOps & Cloud Engineer">
-    <meta name="description" content="DevOps Lead specializing in AWS, Kubernetes, Terraform, CI/CD automation, and multi-cloud infrastructure.">
+    <title>Dipak Mehta | DevOps & AI Infrastructure Engineer</title>
+    <meta name="title" content="Dipak Mehta | DevOps & AI Infrastructure Engineer">
+    <meta name="description" content="DevOps Lead & AI Infrastructure Engineer specializing in AWS, Kubernetes, Terraform, Local LLM Deployments (Ollama/GPUs), and CI/CD automation.">
 
     <!-- Open Graph / LinkedIn Social Preview -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dipak-mehta.github.io/">
-    <meta property="og:title" content="Dipak Mehta | DevOps & Cloud Engineer">
-    <meta property="og:description" content="DevOps Lead specializing in AWS, Kubernetes, Terraform, CI/CD automation, and multi-cloud infrastructure.">
+    <meta property="og:title" content="Dipak Mehta | DevOps & AI Infrastructure Engineer">
+    <meta property="og:description" content="DevOps Lead & AI Infrastructure Engineer specializing in AWS, Kubernetes, Terraform, Local LLM Deployments (Ollama/GPUs), and CI/CD automation.">
     <meta property="og:image" content="https://dipak-mehta.github.io/portfolio-preview.png">
 
     <!-- Icons & Fonts -->
@@ -26,6 +26,7 @@
             --accent-blue: #38bdf8;
             --accent-green: #10b981;
             --accent-purple: #818cf8;
+            --accent-pink: #f43f5e;
             --text-main: #f3f4f6;
             --text-muted: #9ca3af;
             --border-color: rgba(255, 255, 255, 0.08);
@@ -51,9 +52,9 @@
 
         /* Hero Section */
         .hero { padding: 70px 0 40px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
-        .hero-text h1 { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 15px; }
+        .hero-text h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 15px; }
         .hero-text h1 span { background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-text p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 25px; }
+        .hero-text p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 25px; }
         .status-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: var(--accent-green); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; margin-bottom: 20px; }
         .dot { width: 8px; height: 8px; background-color: var(--accent-green); border-radius: 50%; box-shadow: 0 0 8px var(--accent-green); }
 
@@ -87,9 +88,10 @@
         /* Skills Tags */
         .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .skill-box { background: var(--card-bg); border: 1px solid var(--border-color); padding: 20px; border-radius: 12px; }
-        .skill-box h3 { font-size: 1.05rem; margin-bottom: 12px; color: var(--accent-purple); }
+        .skill-box h3 { font-size: 1.05rem; margin-bottom: 12px; color: var(--accent-purple); display: flex; align-items: center; gap: 8px; }
         .tags { display: flex; flex-wrap: wrap; gap: 8px; }
         .tag { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); color: var(--accent-blue); padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; }
+        .tag-ai { background: rgba(244, 63, 94, 0.1); border-color: rgba(244, 63, 94, 0.3); color: var(--accent-pink); }
 
         /* Experience Timeline */
         .timeline { position: relative; border-left: 2px solid var(--border-color); padding-left: 25px; margin-left: 10px; }
@@ -131,8 +133,8 @@
                 <div class="status-badge">
                     <span class="dot"></span> Open for Freelance & Paid Projects
                 </div>
-                <h1>DevOps & Cloud <span>Infrastructure Engineer</span></h1>
-                <p>DevOps Lead with 4+ years of experience managing multi-cloud infrastructure, leading a 2-person engineering team, and building resilient CI/CD pipelines. Bringing high-precision analytical skills from a background in Pharma Quality Control.</p>
+                <h1>DevOps & AI Infrastructure <span>Engineer</span></h1>
+                <p>DevOps Engineer with 5+ years of experience in designing, deploying, and managing scalable multi-cloud infrastructure (AWS, Azure, GCP). Hands-on expertise in deploying local open-source AI/LLM models on GPU servers and integrating multi-model AI workflows into production systems.</p>
                 
                 <div class="btn-group">
                     <a href="mailto:dipakm193@gmail.com" class="btn btn-primary"><i class="fa-regular fa-envelope"></i> Hire / Collaborate</a>
@@ -147,10 +149,10 @@
                     <div class="t-dot t-green"></div>
                 </div>
                 <div class="terminal-body">
+                    <p><span class="t-cmd">dipak@devops-node:~$</span> ollama ps</p>
+                    <p class="t-output">NAME: local-llm-gpu<br>STATUS: Running (NVIDIA GPU)<br>LATENCY: Optimized</p>
                     <p><span class="t-cmd">dipak@devops-node:~$</span> kubectl get status</p>
-                    <p class="t-output">NAME: dipak-mehta<br>ROLE: DevOps Engineer (Team Lead)<br>TEAM: 2 Engineers Managed<br>LOCATION: Pune, India<br>EXPERIENCE: 4+ Years</p>
-                    <p><span class="t-cmd">dipak@devops-node:~$</span> terraform plan</p>
-                    <p class="t-output">Plan: 3 to add (AWS, EKS, CI/CD Pipelines).</p>
+                    <p class="t-output">ROLE: DevOps Engineer<br>LOCATION: Pune, India<br>EXPERIENCE: 5+ Years</p>
                     <p><span class="t-cmd">dipak@devops-node:~$</span> <span style="animation: blink 1s infinite;">_</span></p>
                 </div>
             </div>
@@ -175,6 +177,16 @@
             <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Technical Toolkit</h2>
             <div class="skills-container">
                 <div class="skill-box">
+                    <h3><i class="fa-solid fa-brain" style="color: var(--accent-pink);"></i> AI & GenAI Infra</h3>
+                    <div class="tags">
+                        <span class="tag tag-ai">Ollama</span>
+                        <span class="tag tag-ai">GPU Server Deployment</span>
+                        <span class="tag tag-ai">OpenAI API</span>
+                        <span class="tag tag-ai">Anthropic Claude</span>
+                        <span class="tag tag-ai">Google Gemini</span>
+                    </div>
+                </div>
+                <div class="skill-box">
                     <h3><i class="fa-brands fa-aws"></i> Cloud Platforms</h3>
                     <div class="tags">
                         <span class="tag">AWS (ECS, EKS, Lambda, CloudFront)</span>
@@ -195,9 +207,8 @@
                 <div class="skill-box">
                     <h3><i class="fa-solid fa-cubes"></i> Containers & K8s</h3>
                     <div class="tags">
-                        <span class="tag">Kubernetes (EKS/ECS)</span>
+                        <span class="tag">Kubernetes (EKS, ECS)</span>
                         <span class="tag">Docker</span>
-                        <span class="tag">Microservices</span>
                     </div>
                 </div>
                 <div class="skill-box">
@@ -206,9 +217,17 @@
                         <span class="tag">Grafana</span>
                         <span class="tag">Prometheus</span>
                         <span class="tag">CloudWatch</span>
-                        <span class="tag">Datadog</span>
-                        <span class="tag">PagerDuty</span>
-                        <span class="tag">MySQL / MariaDB / Postgres</span>
+                        <span class="tag">Loki</span>
+                        <span class="tag">MySQL / MariaDB / MongoDB / PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h3><i class="fa-solid fa-code"></i> Scripting & Tools</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Bash</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Linux / Windows / Mac</span>
                     </div>
                 </div>
             </div>
@@ -218,15 +237,18 @@
             <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="job-title">DevOps Engineer (Team Lead)</div>
+                    <div class="job-title">DevOps Engineer</div>
                     <div class="job-meta">Zestl Software Pvt. Ltd. | Dec 2022 – Present</div>
                     <ul class="job-bullets">
-                        <li>Lead and mentor a 2-person DevOps team managing multi-account cloud infrastructure and deployments.</li>
-                        <li>Designed and deployed scalable applications on AWS (ECS, EKS, Lambda, CloudFront).</li>
-                        <li>Maintained multi-account environments across AWS, Azure, and GCP using Terraform, boosting operational efficiency by 35%.</li>
-                        <li>Built CI/CD automation in Jenkins and GitLab CI, reducing deployment failures by 45%.</li>
-                        <li>Implemented observability stacks with Grafana, Prometheus, Datadog, and CloudWatch, cutting incident response time by 40%.</li>
-                        <li>Migrated workloads to AWS EKS, increasing infrastructure scalability by 50%.</li>
+                        <li>Deployed local LLMs using Ollama on dedicated cloud GPU servers (NVIDIA) to evaluate latency, compute overhead, and inference efficiency for production viability.</li>
+                        <li>Integrated LLM APIs and local models (OpenAI, Anthropic Claude, Google Gemini, and Ollama) into backend application workflows to power AI-driven features.</li>
+                        <li>Designed and deployed scalable applications using AWS services including ECS, EKS, Lambda, and CloudFront.</li>
+                        <li>Built and maintained CI/CD pipelines using Jenkins, GitLab CI/CD, and AWS CodePipeline, reducing deployment failures by 45%.</li>
+                        <li>Managed multi-account environments across AWS, Azure, and GCP using Terraform, improving efficiency by 35%.</li>
+                        <li>Implemented monitoring solutions using Grafana, Prometheus, Datadog, CloudWatch, and Loki, cutting incident response time by 40%.</li>
+                        <li>Administered and optimized MySQL and MariaDB databases.</li>
+                        <li>Migrated applications to Kubernetes (AWS EKS), improving scalability by 50%.</li>
+                        <li>Developed serverless architectures using AWS Lambda and collaborated with teams to debug and optimize production and non-production environments.</li>
                     </ul>
                 </div>
 
@@ -234,17 +256,12 @@
                     <div class="job-title">DevOps Engineer</div>
                     <div class="job-meta">Hatcube Solution LLP | Aug 2021 – Dec 2022</div>
                     <ul class="job-bullets">
-                        <li>Managed cloud operations for applications hosted on AWS EC2 and ECS infrastructure.</li>
-                        <li>Created infrastructure templates with CloudFormation and Terraform, containerizing microservices with Docker.</li>
-                        <li>Established CloudWatch and Grafana monitoring dashboards for development, testing, and production environments.</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="job-title">Quality Control Officer (Pharma R&D)</div>
-                    <div class="job-meta">GSK, Lupin, JRF, Harman | Prior Experience</div>
-                    <ul class="job-bullets">
-                        <li>Managed quality control standards, analytical laboratory testing, compliance, and data verification across top MNC pharmaceutical organizations prior to transitioning into DevOps engineering.</li>
+                        <li>Supported deployment of applications on AWS EC2 and ECS infrastructure.</li>
+                        <li>Built CI/CD pipelines using Jenkins for multiple applications.</li>
+                        <li>Created infrastructure templates using CloudFormation and Terraform.</li>
+                        <li>Developed Docker containers for microservices.</li>
+                        <li>Monitored systems using CloudWatch and Grafana.</li>
+                        <li>Managed Dev/Test environments ensuring smooth production releases.</li>
                     </ul>
                 </div>
             </div>
@@ -255,7 +272,7 @@
             <div class="skills-container">
                 <div class="skill-box">
                     <h3>Education</h3>
-                    <p><strong>M.Sc. in Organic Chemistry</strong> (2015 – 2017)</p>
+                    <p><strong>M.Sc.</strong> (2015 – 2017)</p>
                     <p style="color: var(--text-muted); font-size: 0.9rem;">Dr. Babasaheb Ambedkar Marathwada University (CGPA: 7.44)</p>
                 </div>
                 <div class="skill-box">
@@ -263,7 +280,7 @@
                     <ul style="margin-left: 15px; color: var(--text-muted); font-size: 0.9rem;">
                         <li>AWS Cloud Practitioner Essentials</li>
                         <li>Complete Python Developer Certification</li>
-                        <li><strong>Best Employee Q2 2024</strong> (Odin's Beard Award)</li>
+                        <li><strong>Best Employee Q2 2024</strong> (Odin's Beard Award - Recognized for excellence in DevOps delivery)</li>
                     </ul>
                 </div>
             </div>
